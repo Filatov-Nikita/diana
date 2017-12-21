@@ -19,7 +19,7 @@
                 </div>
                    @else
                     <div class="phone">
-                        <a href="{{url('login')}}">Войти</a>
+                        <a href="{{url('login')}}">Войти</a> /  <a href="{{url('/registration')}}">Регистрация</a>
                     </div>
                 @endif
             </div>

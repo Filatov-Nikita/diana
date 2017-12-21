@@ -10,7 +10,7 @@
                         <a  href = "" class="foto">
                             <div class="black">
                                 <div class="text">
-                                    День рождения группы в вк
+                                    Здесь будут новости
                                 </div>
                                 <div class="date">
                                     22.01.2017
@@ -25,10 +25,13 @@
                         <a  href = "" class="foto">
                             <div class="black">
                                 <div class="text">
-                                    Животные от населения
+                                    Здесь будут новости
+                                </div>
+                                <div class="date">
+                                    22.01.2017
                                 </div>
                             </div>
-                            <img src="{{url('img/naselenie.jpg')}}" alt="">
+                            <img src="{{url('img/lost.jpg')}}" alt="">
                         </a>
                     </div>
                     <div class="item">
@@ -37,10 +40,13 @@
                         <a  href = "" class="foto">
                             <div class="black">
                                 <div class="text">
-                                    Собаки от потеряшек
+                                    Здесь будут новости
+                                </div>
+                                <div class="date">
+                                    22.01.2017
                                 </div>
                             </div>
-                            <img src="{{url('img/dog.jpg')}}" alt="">
+                            <img src="{{url('img/lost.jpg')}}" alt="">
                         </a>
                     </div>
                     <div class="item">
@@ -49,10 +55,13 @@
                         <a  href = "" class="foto">
                             <div class="black">
                                 <div class="text">
-                                    Кошки от потеряшек
+                                    Здесь будут новости
+                                </div>
+                                <div class="date">
+                                    22.01.2017
                                 </div>
                             </div>
-                            <img src="{{url('img/081.jpg')}}" alt="">
+                            <img src="{{url('img/lost.jpg')}}" alt="">
                         </a>
                     </div>
                     <div class="item">
@@ -61,10 +70,13 @@
                         <a  href = "" class="foto">
                             <div class="black">
                                 <div class="text">
-                                    Нужна поддержка
+                                    Здесь будут новости
+                                </div>
+                                <div class="date">
+                                    22.01.2017
                                 </div>
                             </div>
-                            <img src="{{url('img/needHelp.jpg')}}" alt="">
+                            <img src="{{url('img/lost.jpg')}}" alt="">
                         </a>
                     </div>
                 </div>

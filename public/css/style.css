@@ -379,6 +379,11 @@ footer .copy {
   margin-right: 15px;
   width: calc(50% - 30px);
 }
+.auth_page .container .auth .err {
+  text-align: center;
+  font: 18px roboto;
+  margin-top: 15px;
+}
 @media screen and (max-width: 870px) {
   .auth_page .container .auth {
     margin-bottom: 15px;

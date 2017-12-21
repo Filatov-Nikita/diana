@@ -5,9 +5,6 @@
         <div class="auth">
             <div class="name">Авторизация</div>
             <div class="form">
-                @if(isset($authError))
-                    {{$authError}}
-                    @endif
                 <form action="" method = "POST">
                     {{ csrf_field() }}
                     <label>Логин*<input type="text" id = "one" name = "email"></label>
@@ -15,6 +12,9 @@
                     <input type="submit" value = "Войти" class = "btn">
                 </form>
             </div>
+            @if(session('authError'))
+                <div class = "err">{{session('authError')}}</div>
+            @endif
         </div>
     </div>
 </div>

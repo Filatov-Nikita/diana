@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Carbon;
+use App\Http\Requests\RequestRegistration;
 class LoginController extends Controller
 {
     public function PostLogin(Request $request) {
@@ -21,11 +22,11 @@ class LoginController extends Controller
         }
     }
 
-    public function registration() {
+    public function PostRegistration(RequestRegistration $request) {
         DB::table('users')->insert([
-            'name' => 'diana',
-            'email' => 'diana@1.ru',
-            'password' => bcrypt('123456'),
+            'name' => $request->input('name'),
+            'email' => $request->input('email'),
+            'password' => bcrypt($request->input('password')),
             'created_at' => Carbon::createFromTimestamp(time())
                 ->format('Y-m-d H:i:s'),
             'updated_at' => Carbon::createFromTimestamp(time())
