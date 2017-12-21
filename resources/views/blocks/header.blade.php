@@ -13,6 +13,15 @@
                 <div class="phone">
                    Горячая линия: (9044) 94-55-66
                 </div>
+                @if(Auth::check())
+                <div class="phone">
+                    <a href="{{url('logout')}}">Выход {{Auth::user()->name}}</a>
+                </div>
+                   @else
+                    <div class="phone">
+                        <a href="{{url('login')}}">Войти</a>
+                    </div>
+                @endif
             </div>
         </div>
     </div>
@@ -23,7 +32,7 @@
         <ul>
             <li><a href="{{url('/')}}">Главная</a></li>
             <li><a href="{{url('/news')}}">Новости</a></li>
-            <li><a href="">О нас</a></li>
+            <li><a href="{{url('/about')}}">О нас</a></li>
             <li><a href="">Как помочь</a></li>
         </ul>
     </div>
