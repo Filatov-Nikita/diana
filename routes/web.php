@@ -17,6 +17,10 @@ Route::get('/login', function () {
     return view('login');
 });
 
+Route::get('/help', function () {
+    return view('whatHelp');
+});
+
 Route::post('/login', 'LoginController@PostLogin')->name('login.auth');
 
 Route::get('/logout', 'LoginController@logout');

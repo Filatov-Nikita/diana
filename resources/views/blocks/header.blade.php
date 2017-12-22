@@ -33,7 +33,7 @@
             <li><a href="{{url('/')}}">Главная</a></li>
             <li><a href="{{url('/news')}}">Новости</a></li>
             <li><a href="{{url('/about')}}">О нас</a></li>
-            <li><a href="">Как помочь</a></li>
+            <li><a href="{{url('/help')}}">Как помочь</a></li>
         </ul>
     </div>
 </div>

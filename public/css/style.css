@@ -463,6 +463,15 @@ footer .copy {
 .auth_page .container .auth .form input[type=submit]:hover {
   background: #000;
 }
+.help .fin {
+  font: 24px roboto;
+  margin-bottom: 20px;
+}
+.help .text {
+  font: 18px roboto;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
 body,
 div,
 dl,
