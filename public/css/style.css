@@ -356,6 +356,19 @@ footer .copy {
   background: #EE8001;
   height: 5px;
 }
+.aboutPage {
+  font: 18px roboto;
+  padding: 20px 0;
+  line-height: 2;
+}
+.aboutPage .headline {
+  text-align: center;
+  margin: 15px 0;
+  font: 600 24px roboto;
+}
+.aboutPage .text span {
+  font-weight: 600;
+}
 .auth_page .container {
   padding-top: 40px;
   padding-bottom: 40px;
