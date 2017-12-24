@@ -4,81 +4,23 @@
         <div class="wrapper">
             <div class="blocks">
                 <div class="container">
+                    @foreach($posts as $post)
                     <div class="item">
                         <div class="top_line">
                         </div>
                         <a  href = "" class="foto">
                             <div class="black">
                                 <div class="text">
-                                    Здесь будут новости
+                                    {{$post->title}}
                                 </div>
                                 <div class="date">
-                                    22.01.2017
+                                    {{articlesForamDate($post->created_at)}}
                                 </div>
                             </div>
-                            <img src="{{url('img/lost.jpg')}}" alt="">
+                            <img src="{{upload_path($post->image)}}" alt="">
                         </a>
                     </div>
-                    <div class="item">
-                        <div class="top_line">
-                        </div>
-                        <a  href = "" class="foto">
-                            <div class="black">
-                                <div class="text">
-                                    Здесь будут новости
-                                </div>
-                                <div class="date">
-                                    22.01.2017
-                                </div>
-                            </div>
-                            <img src="{{url('img/lost.jpg')}}" alt="">
-                        </a>
-                    </div>
-                    <div class="item">
-                        <div class="top_line">
-                        </div>
-                        <a  href = "" class="foto">
-                            <div class="black">
-                                <div class="text">
-                                    Здесь будут новости
-                                </div>
-                                <div class="date">
-                                    22.01.2017
-                                </div>
-                            </div>
-                            <img src="{{url('img/lost.jpg')}}" alt="">
-                        </a>
-                    </div>
-                    <div class="item">
-                        <div class="top_line">
-                        </div>
-                        <a  href = "" class="foto">
-                            <div class="black">
-                                <div class="text">
-                                    Здесь будут новости
-                                </div>
-                                <div class="date">
-                                    22.01.2017
-                                </div>
-                            </div>
-                            <img src="{{url('img/lost.jpg')}}" alt="">
-                        </a>
-                    </div>
-                    <div class="item">
-                        <div class="top_line">
-                        </div>
-                        <a  href = "" class="foto">
-                            <div class="black">
-                                <div class="text">
-                                    Здесь будут новости
-                                </div>
-                                <div class="date">
-                                    22.01.2017
-                                </div>
-                            </div>
-                            <img src="{{url('img/lost.jpg')}}" alt="">
-                        </a>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>

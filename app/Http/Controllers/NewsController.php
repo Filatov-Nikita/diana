@@ -36,6 +36,7 @@ class NewsController extends Controller
     }
 
     public function add() {
+        $this->authorize('admin');
         return view('news.add');
     }
 

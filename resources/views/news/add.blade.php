@@ -2,22 +2,21 @@
 
 @section('content')
 
-
     <div class="formAdd">
         <div class="wrapper">
             <div class="add">Добавление новости</div>
-            @if(session('successPostCreate'))
+            @if(session('successNewsCreate'))
                 <style>
                     .success {
                         background: #158c25b8;
                         color:#fff;
                         text-align: center;
                         padding: 5px 0;
-                        margin: 0 15px;
+                        margin: 15px 0;
                         font:18px lora;
                     }
                 </style>
-                <div class = "success">{{session('successPostCreate')}}</div>
+                <div class = "success">{{session('successNewsCreate')}}</div>
             @endif
             <div class="form">
                 <form action="" method="POST" enctype="multipart/form-data">
