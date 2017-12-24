@@ -13,11 +13,22 @@
 <body>
     @include('blocks.header')
         @yield('content')
-
+    <script src="{{ asset('/js/ckeditor/ckeditor.js') }}"
+            type="text/javascript" charset="utf-8" ></script>
     <script src = "{{url('js/jquery-3.2.0.min.js')}}"></script>
     <script src = "{{url('js/fnmenu.jquery.js')}}"></script>
     <script src = "{{url('js/slick.min.js')}}"></script>
     <script src = "{{url('js/script.js')}}"></script>
+    <script>
+        var editor = CKEDITOR.replace( 'content',
+            {
+                filebrowserImageBrowseUrl: '{{url('/laravel-filemanager?type=Images')}}',
+                filebrowserImageUploadUrl: '{{url('/laravel-filemanager/upload?type=Images&_token=')}}',
+                filebrowserBrowseUrl: '{{url('/laravel-filemanager?type=Files')}}',
+                filebrowserUploadUrl: '{{url('/laravel-filemanager/upload?type=Files&_token=')}}'
+
+            } );
+    </script>
     @include('blocks.footer')
 </body>
 </html>

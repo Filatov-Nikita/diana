@@ -39,7 +39,7 @@ class RouteServiceProvider extends ServiceProvider
 
         $this->mapWebRoutes();
 
-        //
+        $this->mapNewsRoutes();
     }
 
     /**
@@ -56,6 +56,13 @@ class RouteServiceProvider extends ServiceProvider
              ->group(base_path('routes/web.php'));
     }
 
+    protected function mapNewsRoutes()
+    {
+        Route::prefix('news')
+            ->middleware(['web', 'auth'])
+            ->namespace($this->namespace)
+            ->group(base_path('routes/news.php'));
+    }
     /**
      * Define the "api" routes for the application.
      *

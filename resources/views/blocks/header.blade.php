@@ -34,6 +34,9 @@
             <li><a href="{{url('/news')}}">Новости</a></li>
             <li><a href="{{url('/about')}}">О нас</a></li>
             <li><a href="{{url('/help')}}">Как помочь</a></li>
+            @if(Auth::check())
+                <li><a href="{{url('/news/add')}}">Добавить новость</a></li>
+                @endif
         </ul>
     </div>
 </div>

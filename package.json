@@ -19,5 +19,8 @@
     "less-loader": "^4.0.5",
     "lodash": "^4.17.4",
     "smart-grid": "^2.0.1"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.7"
   }
 }
