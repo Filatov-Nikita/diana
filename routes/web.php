@@ -28,3 +28,4 @@ Route::get('/registration', function () {
 });
 
 Route::post('/registration', 'LoginController@PostRegistration')->name('registration');
+

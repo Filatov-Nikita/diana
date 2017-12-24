@@ -8,7 +8,7 @@
                     <div class="item">
                         <div class="top_line">
                         </div>
-                        <a  href = "" class="foto">
+                        <a  href = "{{route('site.newsOne', ['id' => $post->id])}}" class="foto">
                             <div class="black">
                                 <div class="text">
                                     {{$post->title}}

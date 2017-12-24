@@ -3,7 +3,7 @@
         <div class="container">
             <div class="logo">
                 <a href="{{url('/')}}">
-                    <img src="img/logo.png" alt="">
+                    <img src="{{asset('img/logo.png')}}" alt="">
                 </a>
             </div>
             <div class="left_info">

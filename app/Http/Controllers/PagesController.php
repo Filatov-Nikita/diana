@@ -11,4 +11,10 @@ class PagesController extends Controller
         $posts = Post::orderBy('created_at', 'DESC')->get();
         return view('news', ['posts' => $posts]);
     }
+
+    public function newsByOne($id) {
+        $post = Post::findOrFail($id);
+        return view('newsByOne', ['post' => $post]);
+    }
+
 }
