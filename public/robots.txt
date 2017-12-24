@@ -1,2 +1,10 @@
-User-agent: *
-Disallow:
+
+User-agent: Yandex
+Disallow: /*utm_
+
+User-agent: YandexBot
+Disallow: /*utm_
+
+
+User-agent: Googlebot
+Disallow: /*utm_
