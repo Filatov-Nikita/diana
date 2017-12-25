@@ -29,3 +29,4 @@ Route::get('/registration', function () {
 
 Route::post('/registration', 'LoginController@PostRegistration')->name('registration');
 
+Route::get('/{id}', 'PagesController@newsByOne')->name('site.newsOne');

@@ -5,6 +5,9 @@
                 <a href="{{url('/')}}">
                     <img src="{{asset('img/logo.png')}}" alt="">
                 </a>
+                <div class="name">
+                    <a href="{{url('/')}}">Потеряшки</a>
+                </div>
             </div>
             <div class="left_info">
                 <a href = "https://vk.com/poteriashki" class="name" target="_blank">

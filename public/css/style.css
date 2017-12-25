@@ -22,6 +22,16 @@ header .container {
     text-align: center;
   }
 }
+header .container .logo .name {
+  font: 600 26px roboto;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 10px;
+}
+header .container .logo .name a {
+  text-decoration: none;
+  color: #6b6b6b;
+}
 header .container .left_info .name {
   display: block;
   text-decoration: none;
@@ -692,4 +702,22 @@ img {
     padding-left: 15px;
     padding-right: 15px;
   }
+}
+.button_up {
+  position: fixed;
+  bottom: 3%;
+  right: 40px;
+  width: 55px;
+  height: 55px;
+  background: #ee8001;
+  z-index: 99999;
+  display: none;
+  border-radius: 50%;
+  cursor: pointer;
+  text-align: center;
+  font-size: 45px;
+  padding-top: 8px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #fff;
 }
