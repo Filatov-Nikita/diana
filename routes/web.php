@@ -5,7 +5,7 @@
 Route::get('/', 'MainController@mainView');
 Route::get('/categories/{id}', 'MainController@categoriesList')->name('listFromCategories');
 Route::get('/news', 'PagesController@news');
-
+Route::get('/new/{id}', 'PagesController@newsById')->name('newsById');
 Route::get('/about', function () {
     return view('about');
 });

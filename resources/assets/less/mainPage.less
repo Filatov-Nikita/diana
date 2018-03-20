@@ -80,6 +80,7 @@ header {
   .container {
    .row-flex();
     .left_panel {
+      border-radius: 10px;
       background: #dcdbdb;
       align-self: flex-start;
       .col();
@@ -89,7 +90,8 @@ header {
       });
       .show {
         text-align: center;
-padding: 5px 0;
+        padding: 5px 0;
+        border-radius: 3px;
         transition: background, 0.3s;
         &:hover {
           background: #56A552;
@@ -104,6 +106,7 @@ padding: 5px 0;
         }
       }
       .top {
+        border-radius: 3px;
         background: #EE8001;
         color: #fff;
         font: 400 18px roboto;
@@ -118,9 +121,9 @@ padding: 5px 0;
           margin-bottom: 15px;
           .foto {
             .size(6);
-
+          
             img {
-
+                border-radius: 50%;
             }
             margin-bottom: 10px;
             max-height: 150px;
@@ -129,10 +132,10 @@ padding: 5px 0;
 
           }
           .text {
-
             .size(6);
             word-wrap: break-word;
             line-height: 1.4;
+            align-self: center;
            // word-break: break-all;
             a {
               font: 16px roboto;

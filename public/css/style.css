@@ -91,6 +91,7 @@ header .container .left_info .phone {
   margin-right: -15px;
 }
 .two_panel .container .left_panel {
+  border-radius: 10px;
   background: #dcdbdb;
   -ms-flex-item-align: start;
       align-self: flex-start;
@@ -109,6 +110,7 @@ header .container .left_info .phone {
 .two_panel .container .left_panel .show {
   text-align: center;
   padding: 5px 0;
+  border-radius: 3px;
   -webkit-transition: background, 0.3s;
   transition: background, 0.3s;
   background: #8c8c8c;
@@ -124,6 +126,7 @@ header .container .left_info .phone {
   text-decoration: none;
 }
 .two_panel .container .left_panel .top {
+  border-radius: 3px;
   background: #EE8001;
   color: #fff;
   font: 400 18px roboto;
@@ -146,10 +149,15 @@ header .container .left_info .phone {
   overflow: hidden;
   margin-right: 15px;
 }
+.two_panel .container .left_panel .content .item .foto img {
+  border-radius: 50%;
+}
 .two_panel .container .left_panel .content .item .text {
   width: calc(50% - 30px);
   word-wrap: break-word;
   line-height: 1.4;
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 .two_panel .container .left_panel .content .item .text a {
   font: 16px roboto;

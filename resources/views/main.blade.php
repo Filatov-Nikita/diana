@@ -8,37 +8,20 @@
                         Последние новости
                     </div>
                     <div class="content">
+                        @foreach($posts as $post)
                         <div class="item">
                             <div class="foto">
-                                <a href="">
+                                <a href="{{route('newsById', ['id' => $post->id])}}">
                                     <img src="{{url('img/icon1.jpg')}}" alt="">
                                 </a>
                             </div>
                             <div class="text">
-                                <a href="">СрочноСрочно СрочноСрочно нужна помощь</a>
+                                 <a href="{{route('newsById', ['id' => $post->id])}}">{{$post->title}}</a>
                             </div>
-                        </div>
-                        <div class="item">
-                            <div class="foto">
-                                <a href="">
-                                    <img src="{{url('img/icon2.jpg')}}" alt="">
-                                </a>
-                            </div>
-                            <div class="text">
-                                <a href="">Срочно нужна помощь</a>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="foto">
-                                <a href="">
-                                    <img src="{{url('img/icon1.jpg')}}" alt="">
-                                </a>
-                            </div>
-                            <div class="text">
-                                <a href="">Срочно нужна помощь</a>
-                            </div>
-                        </div>
+                        </div> 
+                        @endforeach
                     </div>
+                   
                     <div class="show">
                         <a href="{{url('/news')}}">Показать еще</a>
                     </div>
