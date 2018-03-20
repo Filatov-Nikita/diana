@@ -49,67 +49,21 @@
                     </div>
                     <div class="blocks">
                         <div class="container">
+                            @foreach($categories as $categorie)
                             <div class="item">
                                 <div class="top_line">
                                 </div>
-                                <a  href = "" class="foto">
+                                    <a  href = "{{route('listFromCategories', ['id' => $categorie->id])}}" class="foto">
                                     <div class="black">
                                         <div class="text">
-                                            Потерянные животные
+                                            {{$categorie->name}}
                                         </div>
                                     </div>
                                     <img src="{{url('img/lost.jpg')}}" alt="">
                                 </a>
-                            </div>
-                            <div class="item">
-                                <div class="top_line">
-                                </div>
-                                <a  href = "" class="foto">
-                                    <div class="black">
-                                        <div class="text">
-                                          Животные от населения
-                                        </div>
-                                    </div>
-                                    <img src="{{url('img/naselenie.jpg')}}" alt="">
-                                </a>
-                            </div>
-                            <div class="item">
-                                <div class="top_line">
-                                </div>
-                                <a  href = "" class="foto">
-                                    <div class="black">
-                                        <div class="text">
-                                            Собаки от потеряшек
-                                        </div>
-                                    </div>
-                                    <img src="{{url('img/dog.jpg')}}" alt="">
-                                </a>
-                            </div>
-                            <div class="item">
-                                <div class="top_line">
-                                </div>
-                                <a  href = "" class="foto">
-                                    <div class="black">
-                                        <div class="text">
-                                            Кошки от потеряшек
-                                        </div>
-                                    </div>
-                                    <img src="{{url('img/081.jpg')}}" alt="">
-                                </a>
-                            </div>
-                            <div class="item">
-                                <div class="top_line">
-                                </div>
-                                <a  href = "" class="foto">
-                                    <div class="black">
-                                        <div class="text">
-                                           Нужна поддержка
-                                        </div>
-                                    </div>
-                                    <img src="{{url('img/needHelp.jpg')}}" alt="">
-                                </a>
-                            </div>
-                    </div>
+                          </div>
+                          @endforeach
+                     </div>
                 </div>
             </div>
          </div>

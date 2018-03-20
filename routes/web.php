@@ -2,9 +2,8 @@
 
 
 
-Route::get('/', function () {
-    return view('main');
-});
+Route::get('/', 'MainController@mainView');
+Route::get('/categories/{id}', 'MainController@categoriesList')->name('listFromCategories');
 Route::get('/news', 'PagesController@news');
 
 Route::get('/about', function () {

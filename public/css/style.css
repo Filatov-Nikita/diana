@@ -37,10 +37,11 @@ header .container .left_info .name {
   text-decoration: none;
   margin: 0 auto;
   max-width: 500px;
+  border-radius: 3px;
   background: #EE8001;
   -webkit-transition: background, 0.3s;
   transition: background, 0.3s;
-  padding: 10px;
+  padding: 10px 30px;
   font: 300 24px roboto;
   color: #fff;
 }
@@ -63,7 +64,7 @@ header .container .left_info .phone {
 .menu {
   margin-bottom: 30px;
   background: #EE8001;
-  padding: 10px;
+  padding: 12px;
   color: #fff;
 }
 .menu ul {
@@ -76,8 +77,8 @@ header .container .left_info .phone {
 }
 .menu ul li a {
   color: #fff;
-  font: 400 18px roboto;
-  margin-left: 25px;
+  font: 300 20px roboto;
+  margin-left: 35px;
   text-decoration: none;
 }
 .two_panel .container {
