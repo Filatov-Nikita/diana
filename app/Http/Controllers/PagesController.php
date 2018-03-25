@@ -17,7 +17,4 @@ class PagesController extends Controller
         return view('newsByOne', ['post' => $post]);
     }
 
-    public function some() {
-        return 1;
-    }
 }

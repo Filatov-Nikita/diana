@@ -34,14 +34,15 @@ class RouteServiceProvider extends ServiceProvider
      * @return void
      */
     public function map()
-    {
+    { 
+       
         $this->mapApiRoutes();
+        
+        $this->mapAnimalsRoutes();
 
         $this->mapWebRoutes();
 
-        $this->mapNewsRoutes();
-
-        $this->mapAnimalsRoutes();
+        $this->mapNewsRoutes(); 
     }
 
     /**
@@ -60,7 +61,8 @@ class RouteServiceProvider extends ServiceProvider
 
     protected function mapAnimalsRoutes()
     {
-        Route::middleware(['web'])->prefix('animals')
+        Route::middleware(['web', 'auth'])
+            ->prefix('animals')
             ->namespace($this->namespace)
             ->group(base_path('routes/animals.php'));
     }

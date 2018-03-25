@@ -1,3 +1,7 @@
 <?php 
 
-    Route::get('/', 'PagesController@some');
+Route::get('/', function () {
+    return 'Hello World';
+});
+
+Route::get('/add', 'AnimalsController@getAddForm');
