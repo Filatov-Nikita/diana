@@ -40,6 +40,8 @@ class RouteServiceProvider extends ServiceProvider
         $this->mapWebRoutes();
 
         $this->mapNewsRoutes();
+
+        $this->mapAnimalsRoutes();
     }
 
     /**
@@ -56,6 +58,12 @@ class RouteServiceProvider extends ServiceProvider
              ->group(base_path('routes/web.php'));
     }
 
+    protected function mapAnimalsRoutes()
+    {
+        Route::middleware(['web'])->prefix('animals')
+            ->namespace($this->namespace)
+            ->group(base_path('routes/animals.php'));
+    }
     protected function mapNewsRoutes()
     {
         Route::prefix('news')
@@ -63,6 +71,7 @@ class RouteServiceProvider extends ServiceProvider
             ->namespace($this->namespace)
             ->group(base_path('routes/news.php'));
     }
+   
     /**
      * Define the "api" routes for the application.
      *
