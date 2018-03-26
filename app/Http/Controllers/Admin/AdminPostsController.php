@@ -1,15 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
-use App\Classes\Uploader;
-use App\Models\Post;
-use App\Http\Requests\RequestNewsCreate;
+use App\Http\Controllers\Controller;
 
-class NewsController extends Controller
+class AdminPostsController extends Controller
 {
-
+  
     protected $rules;
     public function __construct()
     {
@@ -52,7 +50,4 @@ class NewsController extends Controller
         return redirect()->route('news.add')->with('successNewsCreate', 'Добавление поста выполнено успешно');
 
     }
-
-
-
 }

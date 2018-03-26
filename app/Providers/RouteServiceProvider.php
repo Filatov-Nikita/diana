@@ -15,6 +15,7 @@ class RouteServiceProvider extends ServiceProvider
      * @var string
      */
     protected $namespace = 'App\Http\Controllers';
+    protected $namespaceAdmin = 'App\Http\Controllers\Admin';
 
     /**
      * Define your route model bindings, pattern filters, etc.
@@ -35,14 +36,13 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function map()
     { 
-       
         $this->mapApiRoutes();
-        
+        $this->mapPostsRoutes(); 
+        $this->mapAuthRoutes();  
+        $this->mapAdminAnimalsRoutes();
+        $this->mapAdminPostsRoutes();
         $this->mapAnimalsRoutes();
-
         $this->mapWebRoutes();
-
-        $this->mapNewsRoutes(); 
     }
 
     /**
@@ -59,19 +59,40 @@ class RouteServiceProvider extends ServiceProvider
              ->group(base_path('routes/web.php'));
     }
 
-    protected function mapAnimalsRoutes()
+    protected function mapAdminAnimalsRoutes()
     {
         Route::middleware(['web', 'auth'])
+            ->prefix('/admin/animals')
+            ->namespace($this->namespaceAdmin)
+            ->group(base_path('routes/admin/animals.php'));
+    }
+
+    protected function mapAdminPostsRoutes()
+    {
+        Route::middleware(['web', 'auth'])
+            ->prefix('/admin/posts')
+            ->namespace($this->namespaceAdmin)
+            ->group(base_path('routes/admin/posts.php'));
+    }
+    protected function mapAnimalsRoutes()
+    {
+        Route::middleware(['web'])
             ->prefix('animals')
             ->namespace($this->namespace)
             ->group(base_path('routes/animals.php'));
     }
-    protected function mapNewsRoutes()
+    protected function mapAuthRoutes()
     {
-        Route::prefix('news')
-            ->middleware(['web', 'auth'])
+        Route::middleware('web')
             ->namespace($this->namespace)
-            ->group(base_path('routes/news.php'));
+            ->group(base_path('routes/auth.php'));
+    }
+    protected function mapPostsRoutes()
+    {
+        Route::prefix('posts')
+            ->middleware('web')
+            ->namespace($this->namespace)
+            ->group(base_path('routes/posts.php'));
     }
    
     /**

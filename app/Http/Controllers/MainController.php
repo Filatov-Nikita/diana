@@ -17,4 +17,5 @@ class MainController extends Controller
         $animals = Categorie::findOrFail($id)->animals;
         return view('listFromCategories', ['animals' => $animals]);
      }
+
 }
