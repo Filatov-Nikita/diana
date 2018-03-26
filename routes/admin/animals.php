@@ -1,5 +1,6 @@
 <?php
 
-    Route::get('some', function() {
-        return 1;
-    });
+    Route::get('/add', 'AdminAnimalsController@getAddAnimalForm');
+    Route::post('/add', 'AdminAnimalsController@postAddAnimalForm');
+
+    Route::get('/test', 'AdminAnimalsController@test');

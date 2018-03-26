@@ -12,6 +12,7 @@
 </head>
 <body>
     @include('blocks.header')
+    @yield('categories')
     <div class="button_up">^</div>
         @yield('content')
     <script src="{{ asset('/js/ckeditor/ckeditor.js') }}"

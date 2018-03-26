@@ -21,8 +21,22 @@
             <div class="form">
                 <form action="" method="POST" enctype="multipart/form-data">
                     {{csrf_field()}}
-                    <label for="title">Название новости</label> <input type="text" name="title">
-                    <input type="file" name = "image"><br>
+                    <label for="name">Имя животного</label> <input type="text" name="name" id = "name">
+                    {{--  <input type="file" name = "image"><br>  --}}
+                    <label for="category">Выберите тип</label>
+                    <select name="category" id="category">
+                        @foreach($all_categories as $categorie)
+                      <option value="{{$categorie->id}}">{{$categorie->name}}</option>
+                        @endforeach
+                    </select><br>
+                    <label for="age">Возраст животного</label>
+                    <input type="text" name = "age" id = "age">
+                    <label for="animal_type">Выберите тип животного</label>
+                    <select name="animal_type" id="animal_type">
+                        @foreach($all_animal_types as $animal_type)
+                             <option value="{{$animal_type->id}}">{{$animal_type->name}}</option>
+                        @endforeach
+                    </select>
                     <textarea name="content" id = "content"></textarea><br>
                     <input type="submit" value="Сохранить"><br>
                 </form>

@@ -1,4 +1,4 @@
-@extends('layouts.base')
+@extends('layouts.baseCategories', ['typesAnimal' => $typesAnimal])
 @section('content')
     <div class="news_main">
         <div class="wrapper">

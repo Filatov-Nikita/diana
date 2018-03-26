@@ -4,10 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Categorie extends Model
+class Animal_type extends Model
 {
-    protected $table = 'categories';
+    protected $table = 'animal_types';
     protected $fillable = ['name'];
+
 
     public function animals() {
         return $this->hasMany('App\Models\Animal');

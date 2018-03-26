@@ -34,7 +34,7 @@
     <div class="wrapper">
         <ul>
             <li><a href="{{url('/')}}">Главная</a></li>
-            <li><a href="{{url('/news')}}">Новости</a></li>
+            <li><a href="{{url('/posts')}}">Новости</a></li>
             <li><a href="{{url('/about')}}">О нас</a></li>
             <li><a href="{{url('/help')}}">Как помочь</a></li>
             @can('admin')
