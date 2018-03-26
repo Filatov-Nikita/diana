@@ -7,11 +7,11 @@
                <ul>
                    @foreach($typesAnimal as $typeAnimal)
                         <li>
-                             <a href="{{''}}">{{$typeAnimal->name}}</a>
+                             <a href="{{route('animals.sortByCategory', ['type_animal_id' => $typeAnimal])}}">{{$typeAnimal->name}}</a>
                         </li>
                    @endforeach
                </ul>
            </div>
         </div>
-    </div>
+    </div> <br>
 @endsection

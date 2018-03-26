@@ -9,3 +9,5 @@
     Route::get('/help', function () {
         return view('whatHelp');
     });
+
+    Route::get('/sort/{type_animal_id}', 'MainController@sortAnimalsByCategory')->name('animals.sortByCategory');
