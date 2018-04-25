@@ -23,20 +23,22 @@
                     {{csrf_field()}}
                     <label for="name">Имя животного</label> <input type="text" name="name" id = "name">
                     {{--  <input type="file" name = "image"><br>  --}}
-                    <label for="category">Выберите тип</label>
+                    <label for="category">Выберите категорию</label>
                     <select name="category" id="category">
                         @foreach($all_categories as $categorie)
                       <option value="{{$categorie->id}}">{{$categorie->name}}</option>
                         @endforeach
-                    </select><br>
+                    </select><br><br>
                     <label for="age">Возраст животного</label>
                     <input type="text" name = "age" id = "age">
+                    <label for="thumbnail">Миниатюра</label>
+                    <input type="file" name = "thumbnail" id = "thumbnail"> <br>
                     <label for="animal_type">Выберите тип животного</label>
                     <select name="animal_type" id="animal_type">
                         @foreach($all_animal_types as $animal_type)
                              <option value="{{$animal_type->id}}">{{$animal_type->name}}</option>
                         @endforeach
-                    </select>
+                    </select> <br> <br>
                     <textarea name="content" id = "content"></textarea><br>
                     <input type="submit" value="Сохранить"><br>
                 </form>

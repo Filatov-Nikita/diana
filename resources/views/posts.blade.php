@@ -17,7 +17,7 @@
                                     {{articlesForamDate($post->created_at)}}
                                 </div>
                             </div>
-                            <img src="{{upload_path($post->image)}}" alt="">
+                            <img src="{{$post->image}}" alt="">
                         </a>
                     </div>
                     @endforeach

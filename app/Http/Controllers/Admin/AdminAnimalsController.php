@@ -7,9 +7,11 @@ use App\Http\Controllers\Controller;
 use App\Models\Categorie;
 use App\Models\Animal_type;
 use App\Models\Animal;
+use App\Classes\Uploader;
 
 class AdminAnimalsController extends Controller
 {
+
     public function getAddAnimalForm() {
         $all_categories = Categorie::get();
         $all_animal_types = Animal_type::get();
@@ -20,6 +22,7 @@ class AdminAnimalsController extends Controller
         $add = Animal::create([
             'name' => $request->input('name'),
             'age' => $request->input('age'),
+            'thumbnail' => $request->file('thumbnail')->store('public'),
             'animal_type_id' => $request->input('animal_type'),
             'categorie_id' => $request->input('category'),
         ]);

@@ -4,49 +4,24 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\RequestNewsCreate;
+use App\Models\Post;
 
 class AdminPostsController extends Controller
 {
   
-    protected $rules;
-    public function __construct()
-    {
-        $this->rules = [
-            'maxSize' => 10 * 1024 * 1024,
-            'minSize' => 10 * 1024,
-            'allowedExt' => [
-                'jpeg',
-                'jpg',
-                'png',
-                'gif',
-                'bmp',
-                'tiff'
-            ],
-            'allowedMime' => [
-                'image/jpeg',
-                'image/png',
-                'image/gif',
-                'image/bmp',
-                'image/tiff'
-            ],
-        ];
-
-    }
-
     public function add() {
         $this->authorize('admin');
         return view('news.add');
     }
 
-    public function addPost(RequestNewsCreate $request,  Uploader $uploader) {
+    public function addPost(RequestNewsCreate $request) {
 
-        if ($uploader->validate($request, 'image', $this->rules)) {
-            $uploadedPath = $uploader->upload();
-        }
-
-        $PostModel = Post::create($request->all());
-        $PostModel->image = $uploadedPath;
-        $PostModel->save();
+        $PostModel = Post::create([
+            'title' => $request->input('title'),
+            'image' =>  $request->file('image')->store('public'),
+            'content' => $request->input('content')
+        ]);
         return redirect()->route('news.add')->with('successNewsCreate', 'Добавление поста выполнено успешно');
 
     }

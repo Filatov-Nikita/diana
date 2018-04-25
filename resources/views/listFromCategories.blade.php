@@ -14,7 +14,7 @@
                                     {{$animal->name}}
                                 </div>
                             </div>
-                            <img src="{{url('img/lost.jpg')}}" alt="">
+                            <img src="{{url($animal->thumbnail)}}" alt="">
                         </a>
                     </div>
                     @endforeach

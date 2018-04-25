@@ -38,7 +38,10 @@
             <li><a href="{{url('/about')}}">О нас</a></li>
             <li><a href="{{url('/help')}}">Как помочь</a></li>
             @can('admin')
-                <li><a href="{{url('/news/add')}}">Добавить новость</a></li>
+                <li><a href="{{url('admin/posts/add')}}">Добавить новость</a></li>
+                @endcan
+                @can('admin')
+                <li><a href="{{url('admin/animals/add')}}">Добавить животное</a></li>
                 @endcan
         </ul>
     </div>

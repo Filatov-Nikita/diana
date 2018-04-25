@@ -12,7 +12,7 @@
                         <div class="item">
                             <div class="foto">
                                 <a href="{{route('postById', ['id' => $post->id])}}">
-                                    <img src="{{url('img/icon1.jpg')}}" alt="">
+                                    <img src="{{url($post->image)}}" alt="">
                                 </a>
                             </div>
                             <div class="text">
@@ -23,7 +23,7 @@
                     </div>
                    
                     <div class="show">
-                        <a href="{{url('/news')}}">Показать еще</a>
+                        <a href="{{url('/posts')}}">Показать еще</a>
                     </div>
                 </div>
                 <div class="right_panel">

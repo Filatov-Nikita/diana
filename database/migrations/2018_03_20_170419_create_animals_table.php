@@ -17,6 +17,7 @@ class CreateAnimalsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('age');
+            $table->string('thumbnail');
             $table->integer('animal_type_id')->unsigned();
             $table->foreign('animal_type_id')->references('id')
             ->on('animal_types')
