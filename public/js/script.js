@@ -20,5 +20,8 @@ $(function () {
             button_up.stop(true).fadeOut(350);
         }
     });
-
+    $('.slider').slick({
+        autoplay: true
+    });
 });
+

@@ -286,6 +286,12 @@ footer .copy {
   text-align: center;
   margin-top: 38px;
 }
+.slider {
+  text-align: center;
+}
+.slider img {
+  margin: 0 auto;
+}
 .news_main .blocks {
   padding: 0 10px;
 }

@@ -30,6 +30,11 @@
                     <div class="top">
                         <img src="{{url('img/2.jpg')}}" alt="">
                     </div>
+                    <div>
+                       
+                            @include('parts.slider')
+                    
+                    </div>
                     <div class="blocks">
                         <div class="container">
                             @foreach($categories as $categorie)
