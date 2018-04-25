@@ -5,7 +5,7 @@
     <div class="newsByone">
         <div class="wrapper">
             <div class="foto">
-                <img src="{{upload_path($post->image)}}" alt="">
+                <img src="{{url($post->image)}}" alt="">
                 <div class="items">
                     <div class="title">{{$post->title}}</div>
                     <div class="date">{{articlesForamDate($post->created_at)}}</div>

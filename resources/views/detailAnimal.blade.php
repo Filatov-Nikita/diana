@@ -5,16 +5,16 @@
     <div class="newsByone">
         <div class="wrapper">
             <div class="foto">
-                {{--  <img src="{{upload_path($post->image)}}" alt="">  --}}
+               <img src="{{url($animal->thumbnail)}}" alt="">
                 <div class="items">
                     <div class="title">{{$animal->name}}</div>
-                    {{--  <div class="date">{{articlesForamDate($post->created_at)}}</div>  --}}
+                  <div class="date">{{articlesForamDate($animal->created_at)}}</div>
                 </div>
 
             </div>
-            {{--  <div class="content">
+           <div class="content">
                 {!! $animal->content !!}
-            </div>  --}}
+            </div> 
         </div>
     </div>
 

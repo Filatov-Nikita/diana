@@ -25,7 +25,9 @@ class AdminAnimalsController extends Controller
             'thumbnail' => $request->file('thumbnail')->store('public'),
             'animal_type_id' => $request->input('animal_type'),
             'categorie_id' => $request->input('category'),
+            'content' => $request->input('content')
         ]);
+        return redirect()->route('listFromCategories', ['id' => 1]);
     }
 
     
