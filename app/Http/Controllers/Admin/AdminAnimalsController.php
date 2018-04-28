@@ -27,7 +27,7 @@ class AdminAnimalsController extends Controller
             'categorie_id' => $request->input('category'),
             'content' => $request->input('content')
         ]);
-        return redirect()->route('listFromCategories', ['id' => 1]);
+        return redirect()->route('listFromCategories', ['id' => $request->input('category')]);
     }
 
     

@@ -286,11 +286,24 @@ footer .copy {
   text-align: center;
   margin-top: 38px;
 }
+footer .social a {
+  margin-right: 5px;
+}
+footer .social img {
+  position: relative;
+  top: 5px;
+}
 .slider {
+  background: #414141;
+  color: #fff;
   text-align: center;
 }
 .slider img {
   margin: 0 auto;
+}
+.slider p {
+  padding: 15px 0;
+  font: 18px roboto;
 }
 .news_main .blocks {
   padding: 0 10px;
