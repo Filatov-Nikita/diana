@@ -4,27 +4,10 @@
         <div class="wrapper">
             <div class="container">
                 <div class="left_panel">
-                    <div class="top">
-                        Последние новости
-                    </div>
-                    <div class="content">
-                        @foreach($posts as $post)
-                        <div class="item">
-                            <div class="foto">
-                                <a href="{{route('postById', ['id' => $post->id])}}">
-                                    <img src="{{url($post->image)}}" alt="">
-                                </a>
-                            </div>
-                            <div class="text">
-                                 <a href="{{route('postById', ['id' => $post->id])}}">{{$post->title}}</a>
-                            </div>
-                        </div> 
-                        @endforeach
-                    </div>
-                   
-                    <div class="show">
-                        <a href="{{url('/posts')}}">Показать еще</a>
-                    </div>
+                    @include('parts.lastNews')
+                    @can('admin')
+                      @include('parts.adminMenu')
+                    @endcan
                 </div>
                 <div class="right_panel">
                     <div class="top">
@@ -42,7 +25,7 @@
                                             {{$categorie->name}}
                                         </div>
                                     </div>
-                                    <img src="{{url('img/lost.jpg')}}" alt="">
+                                    <img src="{{url($categorie->img)}}" alt="">
                                 </a>
                           </div>
                           @endforeach

@@ -15,7 +15,7 @@
                 Телефон горячей линии: (9044) 94-55-66
             </div>
             <div class="social">
-                 Мы в социальных сетях: <a href="https://vk.com/poteriashki"><img src = "{{url('img/vk24.png')}}"></a> <a href="#"><img src="{{url('img/telegram24.png')}}" alt=""></a>
+                 Мы в социальных сетях: <a href="https://vk.com/poteriashki" target="_blank"><img src = "{{url('img/vk24.png')}}"></a> <a href="#" target="_blank"><img src="{{url('img/telegram24.png')}}" alt=""></a>
             </div>
             <div class="copy">
                 Copyright Благотворительный фонд &laquo;Потеряшки&raquo; 2017

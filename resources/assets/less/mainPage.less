@@ -117,10 +117,12 @@ header {
           display: flex;
           margin-bottom: 15px;
           .foto {
-            .size(6);
-          
+            //.size(6);
+          flex-basis: 50px;
             img {
+                width: 100%;
                 border-radius: 50%;
+                height: 50px;
             }
             margin-bottom: 10px;
             max-height: 150px;
@@ -129,7 +131,8 @@ header {
 
           }
           .text {
-            .size(6);
+            //.size(6);
+            flex-grow: 1;
             word-wrap: break-word;
             line-height: 1.4;
             align-self: center;

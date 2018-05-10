@@ -29,6 +29,16 @@ class AdminAnimalsController extends Controller
         ]);
         return redirect()->route('listFromCategories', ['id' => $request->input('category')]);
     }
-
+    public function addCategoryView() {
+        return view('addCategory');
+     }
+     public function addCategoryPost(Request $request) {
+         //dump($request->file('image'));
+        Categorie::create([
+            'name' => $request->input('name'),
+            'img' => $request->file('image')->store('public')
+        ]);
+        return redirect()->route('main');
+     }
     
 }

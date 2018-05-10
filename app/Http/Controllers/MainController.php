@@ -29,5 +29,4 @@ class MainController extends Controller
         return view('sortAnimalByCategory', ['animals' => $resSort]);
      }
 
-
 }
