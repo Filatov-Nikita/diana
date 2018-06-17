@@ -25,7 +25,7 @@
                                             {{$categorie->name}}
                                         </div>
                                     </div>
-                                    <img src="{{url($categorie->img)}}" alt="">
+                                    <img src="{{url('public' . $categorie->img)}}" alt="">
                                 </a>
                           </div>
                           @endforeach
