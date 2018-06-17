@@ -7,6 +7,6 @@
                 {{$animal->name}}
             </div>
         </div>
-        <img src="{{url($animal->thumbnail)}}" alt="">
+        <img src="{{url('public/' . $animal->thumbnail)}}" alt="">
     </a>
 </div>
