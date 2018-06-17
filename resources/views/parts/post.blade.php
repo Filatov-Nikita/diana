@@ -10,6 +10,6 @@
                 {{articlesForamDate($post->created_at)}}
             </div>
         </div>
-        <img src="{{$post->image}}" alt="">
+        <img src="{{url('public/' . $post->image)}}" alt="">
     </a>
 </div>

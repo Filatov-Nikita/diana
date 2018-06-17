@@ -7,7 +7,7 @@
                 <div class="item">
                     <div class="foto">
                         <a href="{{route('postById', ['id' => $post->id])}}">
-                            <img src="{{url($post->image)}}" alt="">
+                            <img src="{{url('public/' . $post->image)}}" alt="">
                         </a>
                     </div>
                     <div class="text">
