@@ -18,6 +18,9 @@
         <div class="text">
              Часы работы Горячей Линии с <span>10:00 до 22:00</span>
         </div>
+        <div class="text">
+            Для обратной связи с нами вы можете написать нам на почту: <a href="mailto:poteryashki@mail.ru" style="color:#000">poteryashki@mail.ru</a>
+       </div>
     </div>
 </div>
     @endsection
