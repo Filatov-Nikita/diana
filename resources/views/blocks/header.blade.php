@@ -21,8 +21,8 @@
                     <a href="{{url('logout')}}">Выход {{Auth::user()->name}}</a>
                 </div>
                    @else
-                    <div class="phone">
-                        <a href="{{url('login')}}">Войти</a> /  <a href="{{url('/registration')}}">Регистрация</a>
+                    <div class="phone" style="text-decoration:underline">
+                        <a style="color:#505050; text-decoration:none" href="{{url('login')}}">Войти</a> /  <a style="color:#505050; text-decoration:none" href="{{url('/registration')}}">Регистрация</a>
                     </div>
                 @endif
             </div>
