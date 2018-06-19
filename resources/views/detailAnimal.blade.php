@@ -5,7 +5,7 @@
     <div class="newsByone">
         <div class="wrapper">
             <div class="foto">
-               <img src="{{url($animal->thumbnail)}}" alt="">
+               <img src="{{url('public/' . $animal->thumbnail)}}" alt="">
                 <div class="items">
                     <div class="title">{{$animal->name}}</div>
                   <div class="date">{{articlesForamDate($animal->created_at)}}</div>
